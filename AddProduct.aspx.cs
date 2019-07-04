@@ -39,7 +39,7 @@ namespace Home
 
             if (con.State == System.Data.ConnectionState.Open)
             {
-                string a = "insert into Product (Brand,Product_id,Product_name,Sales_price,Quantity)values(" + DropDownList1.Text.ToString() + "','" + id.Text.ToString() + "','" + PName.Text.ToString()
+                string a = "insert into Product (Brand_name,Product_id,Product_name,Sales_price,Quantity)values('" + DropDownList1.Text.ToString() + "','" + id.Text.ToString() + "','" + PName.Text.ToString()
                     + "','" + SPrice.Text.ToString() + "','" + DropDownList2.Text.ToString() +  "')";
                 SqlCommand comd = new SqlCommand(a, con);
                 comd.ExecuteNonQuery();
