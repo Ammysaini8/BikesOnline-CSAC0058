@@ -14,7 +14,7 @@ namespace Home
         public string cnstring = "Data Source=amrinder\\sqlexpress;Initial Catalog=Project;Integrated Security=True";
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            if (!Page.IsPostBack)
             {
                 PolulateGridview();
             }
@@ -187,7 +187,7 @@ namespace Home
             GridView1.EditIndex = -1;
 
 
-
+ 
         }
         protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {

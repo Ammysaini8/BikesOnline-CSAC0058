@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="EditProduct.aspx.cs" Inherits="Home.EditProduct" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="EditProduct.aspx.cs" Inherits="Home.EditProduct" EnableEventValidation="false" %>
 
 <!DOCTYPE html>
 
@@ -32,7 +32,7 @@
         .auto-style1 {
             position: absolute;
             top: 21px;
-            left: 616px;
+            left: 620px;
             z-index: 1;
             font-size: x-large;
         }
@@ -108,6 +108,8 @@
         .auto-style16 {
             text-align: center;
             background-color: #CCFF99;
+            width: 1438px;
+            height: 959px;
         }
         .auto-style19 {
             position: absolute;
@@ -125,8 +127,8 @@
         }
         .auto-style21 {
             position: absolute;
-            top: 399px;
-            left: 16px;
+            top: 387px;
+            left: 208px;
             z-index: 1;
             width: 1028px;
             height: 196px;
@@ -221,7 +223,9 @@
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" ShowFooter="True"  DataKeyName="Id"
                 ShowHeaderWhenEmpty="True"
                 OnRowCommand="GridView1_RowCommand" OnRowEditing="GridView1_RowEditing" 
-                 OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowUpdating="GridView1_RowUpdating" OnRowDeleting="GridView1_RowDeleting" OnSelectedIndexChanged="GridView1_SelectedIndexChanged1" CssClass="auto-style21" >
+                 OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowUpdating="GridView1_RowUpdating" OnRowDeleting="GridView1_RowDeleting" CellPadding="4" OnSelectedIndexChanged="GridView1_SelectedIndexChanged1" CssClass="auto-style21" ForeColor="#333333" GridLines="None" >
+               
+                <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                
                 <Columns>
                     <asp:TemplateField HeaderText ="Product_id">
@@ -293,6 +297,16 @@
                         </FooterTemplate>
                     </asp:TemplateField>
                 </Columns>
+                <EditRowStyle BackColor="#999999" />
+                <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                <SortedAscendingCellStyle BackColor="#E9E7E2" />
+                <SortedAscendingHeaderStyle BackColor="#506C8C" />
+                <SortedDescendingCellStyle BackColor="#FFFDF8" />
+                <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
             </asp:GridView>
             <br />
             <br />  
@@ -301,7 +315,7 @@
 
             <br />
             <br />
-            <br />
+            *<br />
             <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
             <br />
             <br />
