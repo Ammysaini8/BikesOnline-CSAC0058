@@ -33,7 +33,7 @@ namespace Home
             con.Open();
             if (con.State == System.Data.ConnectionState.Open)
             {
-                string a = "insert into Brand1(Brand_name,Brand_ID)values('"
+                string a = "insert into Brand1(Brand_Name,Brand_Id)values('"
                     + TextBox1.Text.ToString() + "','" + TextBox2.Text.ToString() + "')";
                 SqlCommand comd = new SqlCommand(a, con);
                 comd.ExecuteNonQuery();

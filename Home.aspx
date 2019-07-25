@@ -5,7 +5,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="Scripts/jquery-3.0.0.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
     <style type="text/css">
         .auto-style1 {
             width: 1423px;
@@ -44,20 +46,20 @@
         }
         .auto-style3 {
             position: absolute;
-            top: 198px;
-            left: 452px;
+            top: 220px;
+            left: 437px;
             z-index: 1;
         }
         .auto-style4 {
             position: absolute;
-            top: 196px;
-            left: 665px;
+            top: 223px;
+            left: 634px;
             z-index: 1;
         }
         .auto-style5 {
             position: absolute;
-            top: 197px;
-            left: 866px;
+            top: 226px;
+            left: 865px;
             z-index: 1;
         }
         .auto-style6 {
@@ -67,6 +69,9 @@
             z-index: 1;
             height: 32px;
             width: 86px;
+        }
+        .auto-style7 {
+            margin-top: 0px;
         }
     </style>
 </head>
@@ -89,8 +94,14 @@
             <asp:LinkButton ID="LinkButton2" runat="server" CssClass="auto-style4" PostBackUrl="~/AddProduct.aspx">Add Product</asp:LinkButton>
             <asp:LinkButton ID="LinkButton3" runat="server" CssClass="auto-style5" PostBackUrl="~/Inventory.aspx">Inventory</asp:LinkButton>
             <asp:LinkButton ID="LinkButton4" runat="server" CssClass="auto-style6" PostBackUrl="~/Login.aspx" ForeColor="White">Logout</asp:LinkButton>
-        <asp:Image ID="Image1" runat="server" ImageUrl="~/image/D.jpg" Height="698px" Width="1366px" />
         
+           
+  <a href="BrandList.aspx">
+        <asp:Image ID="Image1" runat="server" ImageUrl="~/image/D.jpg" Height="698px" Width="1393px" CssClass="auto-style7" />
+        
+           
+            </a>
+ 
            
         </div>
 

@@ -25,7 +25,7 @@ namespace Home
 
         protected void Button1_Click1(object sender, EventArgs e)
         {
-            String myquery = "Select *from BDetails";
+            String myquery = "Select *from Brand1";
             SqlConnection con = new SqlConnection(cnstring);
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = myquery;
@@ -41,7 +41,7 @@ namespace Home
 
         protected void Button2_Click1(object sender, EventArgs e)
         {
-            String myquery = "Select *from PDetails";
+            String myquery = "Select *from Product";
             SqlConnection con = new SqlConnection(cnstring);
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = myquery;

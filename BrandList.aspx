@@ -5,6 +5,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="Scripts/jquery-3.0.0.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
     <style type="text/css">
               .topnav {
   overflow: hidden;
@@ -32,7 +35,7 @@
 
         .auto-style1 {
             position: absolute;
-            top: 20px;
+            top: 6px;
             left: 659px;
             z-index: 1;
             font-size: x-large;
@@ -47,8 +50,8 @@
         }
         .auto-style3 {
             position: absolute;
-            top: 180px;
-            left: 1136px;
+            top: 153px;
+            left: 1126px;
             z-index: 1;
         }
         .auto-style4 {
@@ -72,9 +75,10 @@
         .auto-style8 {
             position: absolute;
             top: 70px;
-            left: 10px;
+            left: -7px;
             z-index: 1;
-            height: 707px;
+            height: 684px;
+            width: 1414px;
         }
 
         </style>
@@ -92,7 +96,7 @@
 </div>
         <div class="auto-style6">
             <br />
-            <asp:Image ID="Image1" runat="server"  ImageUrl="~/image/K.jpg" Width="1366px" CssClass="auto-style8" />
+            <asp:Image ID="Image1" runat="server"  ImageUrl="~/image/H.jpg" CssClass="auto-style8" />
             <br />
             <br />
             <asp:Label ID="Label1" runat="server" CssClass="auto-style1" ForeColor="White" Text="BIKES ONLINE"></asp:Label>
@@ -100,7 +104,7 @@
             <br />
             <asp:Label ID="Label2" runat="server" CssClass="auto-style2" ForeColor="White" Text="Brand List"></asp:Label>
             <br />
-            <asp:LinkButton ID="LinkButton1" runat="server" CssClass="auto-style4" ForeColor="White">Logout</asp:LinkButton>
+            <asp:LinkButton ID="LinkButton1" runat="server" CssClass="auto-style4" ForeColor="White" PostBackUrl="~/Login.aspx">Logout</asp:LinkButton>
             <br />
             <br />
             <br />
@@ -120,7 +124,7 @@
             <br />
             <br />
             <br />
-            <asp:Button ID="Button1" runat="server" CssClass="auto-style3" Text="Add Brand" />
+            <asp:Button ID="Button1" runat="server" CssClass="auto-style3" Text="Add Brand" PostBackUrl="~/AddBrand.aspx" />
             <br />
             <br />
             <br />

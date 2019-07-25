@@ -5,6 +5,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="Scripts/jquery-3.0.0.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+
     <style type="text/css">
          .topnav {
   overflow: hidden;
@@ -31,8 +35,8 @@
 }
         .auto-style1 {
             position: absolute;
-            top: 21px;
-            left: 620px;
+            top: 5px;
+            left: 618px;
             z-index: 1;
             font-size: x-large;
         }
@@ -64,9 +68,9 @@
         .auto-style6 {
             position: absolute;
             top: 181px;
-            left: 453px;
+            left: 450px;
             z-index: 1;
-            width: 155px;
+            width: 170px;
         }
         .auto-style7 {
             position: absolute;
@@ -113,25 +117,25 @@
         }
         .auto-style19 {
             position: absolute;
-            top: 354px;
-            left: 629px;
+            top: 350px;
+            left: 636px;
             z-index: 1;
             width: 94px;
-            right: 730px;
+            right: 722px;
         }
         .auto-style20 {
             position: absolute;
-            top: 355px;
-            left: 767px;
+            top: 352px;
+            left: 784px;
             z-index: 1;
         }
         .auto-style21 {
             position: absolute;
-            top: 387px;
-            left: 208px;
+            top: 419px;
+            left: 160px;
             z-index: 1;
-            width: 1028px;
-            height: 196px;
+            width: 1031px;
+            height: 306px;
         }
         .auto-style24 {
             position: absolute;
@@ -154,11 +158,11 @@
             <br />
  
 </div>
-            <br />
             <asp:Label ID="Label8" runat="server" Text="Edit Product"></asp:Label>
             <br />
+            <br />
             <asp:DropDownList ID="DropDownList2" runat="server" CssClass="auto-style13" >
-                <asp:ListItem>1</asp:ListItem>
+                <asp:ListItem></asp:ListItem>
                 <asp:ListItem>2</asp:ListItem>
                 <asp:ListItem>3</asp:ListItem>
                 <asp:ListItem>4</asp:ListItem>
@@ -183,13 +187,14 @@
             <asp:Label ID="Label2" runat="server" CssClass="auto-style3" Text="Brand"></asp:Label>
             <br />
             <asp:DropDownList ID="DropDownList1" runat="server" CssClass="auto-style6">
-                <asp:ListItem>GT</asp:ListItem>
-                <asp:ListItem>Diadora</asp:ListItem>
+                <asp:ListItem></asp:ListItem>
                 <asp:ListItem>Nakamura</asp:ListItem>
                 <asp:ListItem>Super Cycle</asp:ListItem>
                 <asp:ListItem>Hyper</asp:ListItem>
                 <asp:ListItem>Movelo</asp:ListItem>
                 <asp:ListItem>Banshee</asp:ListItem>
+                <asp:ListItem>GT</asp:ListItem>
+                <asp:ListItem></asp:ListItem>
             </asp:DropDownList>
             <br />
             <br />

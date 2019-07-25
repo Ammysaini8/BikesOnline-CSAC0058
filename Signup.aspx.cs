@@ -4,43 +4,59 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using SRVTextToImage;
+using System.Drawing;
+using System.Drawing.Imaging;
 using System.Data;
 using System.Data.SqlClient;
+using System.Configuration;
+
 
 namespace Home
 {
-    public partial class WebForm3 : System.Web.UI.Page
+    public partial class Signup1 : System.Web.UI.Page
     {
-        public string cnstring = "Data Source=amrinder\\sqlexpress;Initial Catalog=Project;Integrated Security=True";
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void btnSubmit_Click(object sender, EventArgs e)
         {
-
-            if (Page.IsValid)
+            bool isCaptchaValid = false;
+            if (Session["CaptchaText"] != null && Session["CaptchaText"].ToString() == txtCaptchaText.Text)
             {
-                SqlConnection conn = new SqlConnection(cnstring);
-                conn.Open();
-                if (conn.State == System.Data.ConnectionState.Open)
+                isCaptchaValid = true;
+            }
+
+            if (isCaptchaValid)
+            {
+                lblMessage.Text = "Captcha Validation Success";
+                lblMessage.ForeColor = Color.Green;
+                SqlConnection con = new SqlConnection("Data Source=amrinder\\sqlexpress;Initial Catalog=Project;Integrated Security=True");
+                con.Open();
+                if (con.State == System.Data.ConnectionState.Open)
+
                 {
-                    string a = "insert into signup(username,password, Confirm_password)values('" + username.Text.ToString() + "','"
-                        + pswd.Text.ToString() + "','" + cpswd.Text.ToString() + "')";
+                    string a = "insert into signup(username,password, Confirm_password)values('" + uname.Text.ToString() + "','"
+                        + pass.Text.ToString() + "','" + cpass.Text.ToString() + "')";
 
-                    SqlCommand cmd = new SqlCommand(a, conn);
-
+                    SqlCommand cmd = new SqlCommand(a, con);
                     cmd.ExecuteNonQuery();
+                    Response.Redirect("Login.aspx");
 
-                    Response.Write("Connect Successfully");
-                    Response.Redirect("~/Home.aspx");
-                }
-                else
-                {
-                    Response.Write("failed");
+                    
+
+
+
                 }
             }
+            else
+            {
+                lblMessage.Text = "Please apply Captcha to Signup";
+                lblMessage.ForeColor = Color.Red;
+            }
+           
         }
     }
 }

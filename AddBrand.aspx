@@ -5,6 +5,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="Scripts/jquery-3.0.0.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
     <style type="text/css">
               .topnav {
   overflow: hidden;
@@ -48,13 +51,6 @@
             top: 242px;
             left: 431px;
             z-index: 1;
-        }
-        .auto-style4 {
-            position: absolute;
-            top: 21px;
-            left: 660px;
-            z-index: 1;
-            font-size: x-large;
         }
         .auto-style5 {
             position: absolute;
@@ -127,7 +123,6 @@
             <br />
             <asp:Button ID="Button2" runat="server" CssClass="auto-style12" PostBackUrl="~/EditBrand.aspx" Text="Update" OnClick="Button2_Click" />
             <br />
-            <asp:Label ID="Label3" runat="server" CssClass="auto-style4" ForeColor="White" Text="BIKES ONLINE"></asp:Label>
             <br />
             <br />
             <asp:TextBox ID="TextBox2" runat="server" CssClass="auto-style5"></asp:TextBox>
